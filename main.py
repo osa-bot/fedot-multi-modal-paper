@@ -27,11 +27,30 @@ targets = {'product_sentiment_machine_hack': ('Sentiment', 'classification', 'ac
 
 
 def get_text_sources_names(data: MultiModalData) -> list:
+    """
+Returns a list of names for the text sources in the provided data.
+
+    Args:
+        data: The input data containing information about different sources.
+
+    Returns:
+        list: A list of strings, where each string is the name of a text source.
+    """
     text_sources = [source.split('/')[1] for source in list(data.keys()) if 'data_source_text' in source]
     return text_sources
 
 
 def save_to_csv(results: list):
+    """
+Saves a list of lists to a CSV file.
+
+    Args:
+        results: A list of lists representing the data to be saved. Each sublist 
+            will become a row in the CSV file.
+
+    Returns:
+        None
+    """
     with open('results.csv', 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
         for sublist in results:
@@ -39,6 +58,17 @@ def save_to_csv(results: list):
 
 
 def run_multimodal_dataset(dataset_name: str, timeout: int = 1, n_jobs: int = 4):
+    """
+Runs an AutoML pipeline on a multimodal dataset.
+
+    Args:
+        dataset_name: The name of the dataset to run.
+        timeout: The maximum time in seconds to run the AutoML process.
+        n_jobs: The number of jobs to run in parallel.
+
+    Returns:
+        tuple: A tuple containing the metric name and its rounded value, or ('error', 'error') if an error occurred.
+    """
     print(f'Fit of dataset {dataset_name} is started')
     try:
         target, task, metric_name = targets.get(dataset_name)

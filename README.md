@@ -16,7 +16,7 @@
 ## Overview
 
 <overview>
-fedot-multi-modal-paper provides a simple way to download audio from YouTube videos. It allows users to easily convert video content into portable MP3 files for offline listening or use on various devices, offering convenient access to audio information found online.
+fedot-multi-modal-paper allows users to easily download audio from YouTube videos by simply providing a link. It offers a straightforward way to create personal audio collections, making online video content accessible as convenient audio files for anyone without technical expertise.
 </overview>
 
 ---
@@ -40,11 +40,11 @@ fedot-multi-modal-paper provides a simple way to download audio from YouTube vid
 
 <corefeatures>
 
-1. **YouTube to MP3 Conversion**: Converts YouTube video URLs into downloadable MP3 audio files.
-2. **`yt-dlp` Integration**: Uses `yt-dlp` for efficient and reliable video downloading.
-3. **`ffmpeg` Utilization**: Employs `ffmpeg` to convert videos into the MP3 format.
-4. **Error Handling**: Incorporates robust error handling during download & conversion processes.
-5. **Simple Interface**: Offers a streamlined, user-friendly experience for audio extraction.
+1. **YouTube to Audio Conversion**: Converts YouTube video URLs into downloadable audio files easily.
+2. **Streamlined Workflow**: Orchestrates a simple process for extracting and converting audio.
+3. **Format Selection**: Ensures compatibility with devices through selectable audio formats.
+4. **Error Handling**: Manages conversion errors, providing informative user feedback.
+5. **Dependency Management**: Uses `requirements.txt` for consistent package installations.
 
 </corefeatures>
 
